@@ -1,0 +1,15 @@
+#square{
+    position: relative;
+    width:100px;
+    height: 100px;
+    background: white;
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+}
+#bigsquare{
+    width: 1800px;
+    height: 720px;
+    background: white;
+    
+}
