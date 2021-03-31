@@ -1,0 +1,136 @@
+figure{
+    margin: 0;
+}
+
+body{
+	background: url(1586763551_2.jpg) ; 
+	background-attachment: fixed ;
+	background-position: top center;
+}
+
+div.one {
+    background: #fc0;
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid #000;
+   }
+
+   div.one:hover { 
+    transform-origin: 100% 0;
+    transform: rotate(-20deg);
+   }
+
+ .gradient {
+    width: 600px;
+    background: linear-gradient(to left, #deb887, #00bfff);
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid #333;
+   }
+.gradient:hover{
+    transform: rotate(10deg);
+}
+
+
+.flex
+   {
+      width: 350px;
+      height: 200px;
+      border: 1px solid #555;
+      font: 14px Arial;
+
+      display: -webkit-flex;
+      -webkit-flex-direction: row;
+
+      display: flex;
+      flex-direction: row;
+   }
+
+   .flex > div
+   {
+      -webkit-flex: 1 1 auto;
+      flex: 1 1 auto;
+
+      width: 30px; 
+
+      -webkit-transition: width 0.7s ease-out;
+      transition: width 0.7s ease-out;
+   }
+
+   .flex > div:nth-child(1){ background : gold; }
+   .flex > div:nth-child(2){ background : #F74C32; }
+   .flex > div:nth-child(3){ background : gold; }
+
+   .flex > div:hover
+   {
+        width: 200px;
+   }
+
+.box {
+  background-color: rebeccapurple;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  animation-name: slidein;
+  animation-duration: 3s;
+  animation-direction: normal;
+}
+
+@keyframes slidein{
+    from {
+    margin-left: 0%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 100%;
+    width: 100%;
+  }
+}
+ruby{
+    font-size: 18px;
+}
+
+.clafter{
+    width: auto;
+    background-color: aqua;
+    font-size: 20px;
+}
+.clafter::after{
+    content: "pac[псевдоклас after]";
+    background-color: coral;
+    border-color: black;
+    border-style: dotted;
+}
+
+.clbefore{
+    width:auto;
+    background-color: aqua;
+    font-size: 20px;
+}
+
+.clbefore::before{
+    content: "2";
+    background-color: coral;
+    border-color: black;
+    border-style: dotted;
+}
+
+#motion-demo {
+
+    offset-path: path('M10 10 H 180 V 180 H 10 Z');
+  animation: move 3000ms infinite alternate ease-in-out;
+  width: 40px;
+  height: 40px;
+  background: cyan;
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
