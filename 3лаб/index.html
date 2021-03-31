@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>3лаб</title>
+        <meta name="description" content="лаба">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    
+<body>
+
+  <script src = "alert.js">
+  </script>
+  <script> var years = prompt('Скільки вам років?', 100);
+    if(years>18)
+        alert("Я дорослий")
+      else
+          alert("Я дитина")
+</script>
+
+<script>
+    var as = 800;
+    var jos = 800;
+    let params = `scrollbars=no,resizable=yes,status=no,location=no,toolbar=no,menubar=no,
+width=800,height=800,left=-1000,top=-1000`;
+var newWin = window.open("about:blank","hello",params);
+var result = newWin.confirm("Ви хочете змінити параметри?")
+    if(result === true){
+        as = as/2;
+        jos = jos/2;
+        newWin.resizeBy(-as, -jos);
+        newWin.document.write("Ви вибрали зміну параметрів вікна!");
+    }
+    else{newWin.document.write("Ви вирішили не міняти параметри вікна")}
+
+</script>
+
+</body>
+
+</html>
