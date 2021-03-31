@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>4lab</title>
+  <style>
+      input {
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+}
+  </style>
+  
+  <script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ </head>
+ <body>
+ <div id="example"></div>
+     <script src = "scrpit.js"></script>
+<script type="text/javascript">
+setInterval(
+window.onload = function() {
+  var min = 5, inputs = document.getElementsByTagName('INPUT');
+  for (var i=0; i<inputs.length; i++) {
+    inputs[i].onblur = function() {
+      var sib = this.nextSibling;
+      if (sib.tagName=='SPAN') sib.parentNode.removeChild(sib);
+      if (this.value.length < 4) {
+          $('input').css('border-color','red');
+      }
+        if(this.value.length >3 && this.value.length <9){
+          $('input').css('border-color','yellow');
+        }
+        if (this.value.length > 8) {
+             $('input').css('border-color','green');
+        }
+    }
+  }
+},2000);
+</script>
+
+<form>
+<input type='text' value='' /><br />
+</form>
+
+  
+ </body>
+</html>

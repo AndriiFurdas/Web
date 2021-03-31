@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>4лаб</title>
+        <meta name="description" content="лаба">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    
+    
+    <body>
+       
+        <script>
+            var name = "Furdas Andrii"
+            var newname = name;
+            setTimeout(() => {
+        document.write("<p>"+ name +"</p>")}, 2000);
+           let timerID = setTimeout(() => {
+             timerID = setInterval(() => {
+                        document.body.innerHTML = '',  
+                document.write("<p>"+name.substring(0, name.length-1)+"</p>"),  name = name.substring(0, name.length-1), count = count-1}, 1000);}, 2000);
+            setTimeout(() =>{clearInterval(timerID);document.body.innerHTML = '';document.write("<p>"+newname+"</p>");}, (name.length)*1000+3000);
+        </script>
+        
+    </body>
+</html>
